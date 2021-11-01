@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Display Data on Browser</title>
+</head>
+<body>
+
+	<h1>Display Data on Browser</h1>
+	<h2 id="display"></h2>
+
+<script type="text/javascript">
+	var users =
+	{
+		"user":
+		[
+		 {
+		     "FirstName": "Ambuj",
+		     "Lastname":"Sharma"
+
+         },
+         {
+    	     "FirstName": "xyz",
+		     "Lastname":"Pqr"
+         },
+         {
+    	     "FirstName": "Vinay",
+		     "Lastname":"Singh"
+         },
+         {
+    	    "FirstName": "Vijay",
+		    "Lastname":"Kumar"
+         }
+
+		]
+	}
+
+			var data =users.user;
+			var values ="";
+
+			for(var i in data){
+				values+=(Number(i)+1+" . " + data[i].FirstName+" "+ data[i].Lastname+"<br>");
+			}
+			console.log(data);
+
+             document.getElementById('display').innerHTML = values;
+			
+			</script>
+</body>
+</html>
