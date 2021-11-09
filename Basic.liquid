@@ -1,0 +1,36 @@
+{% assign fruits = "apples, oranges, peaches" | split: ", " %}
+{% assign vegetables = "carrots, turnips, potatoes" | split: ", " %}
+
+{% assign everything = fruits | concat: vegetables %}
+
+{% for item in everything %}
+- {{ item }}
+{% endfor %}
+
+
+{% assign firstname = "Ambuj, Anuj, Ajay" |split: ", "%}
+{%assign LastName ="Sharma, Singh, Kumar" |split: ", "%}
+
+{%assign fullNmae = firstname | concat: LastName %}
+
+{%for person in fullNmae %}
+- {{ person }}
+{% endfor%}
+
+{% assign furniture = "chairs, tables, shelves" | split: ", " %}
+
+{% assign everything = fruits | concat: vegetables | concat: furniture | concat: firstname %}
+
+{% for item in everything %}
+- {{ item }}
+{% endfor %}
+
+{%assign published_at = 2021 %}
+{{ article.published_at | date: "%a, %b %d, %y" }}
+{{ article.published_at | date: "%Y" }}
+
+{% assign product_price = 4.99 %}
+{{ product_price | default: 2.99 }}
+
+{% assign display_price = false %}
+{{ display_price | default: true, allow_false: true }}
